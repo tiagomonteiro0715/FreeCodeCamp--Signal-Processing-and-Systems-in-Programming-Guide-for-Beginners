@@ -1,6 +1,9 @@
 # Importing the numpy and matplotlib libraries.
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_style("darkgrid")
 
 '''
 Creates three sinusoidal signals with different frequencies and amplitudes, 
