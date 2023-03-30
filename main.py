@@ -2,6 +2,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+Creates three sinusoidal signals with different frequencies and amplitudes, 
+adds them together to create a composite signal, and stores it in z.
+'''
 # Creating a vector of 300 evenly spaced numbers between 0 and 1.
 t = np.linspace(0, 1, 300, endpoint=False)
 # Creating a sinusoidal signal with a frequency of 10 Hz.
@@ -52,24 +56,24 @@ zf_filtered[~mask] = 0
 # Taking the inverse Fourier transform of the filtered signal.
 z_filtered = np.fft.ifft(zf_filtered)
 
-
-# Plotting the three signals.
-fig1 = plt.figure()
-plt.plot(t, x, label='X signal')
-plt.plot(t, y, label='Y signal')
-plt.plot(t, w, label='W signal')
+plt.figure(figsize=(10,6))
+plt.subplot(211)
+plt.plot(t, x, label='X signal', color='red')
+plt.plot(t, y, label='Y signal', color='blue')
+plt.plot(t, w, label='W signal', color='orange')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
-plt.title('Plot 1')
+plt.title('Plot of the signals X, Y, and W')
 plt.legend()
-
-# Plotting the sum of the three signals.
-fig2 = plt.figure()
+plt.subplot(212)
 plt.plot(t, z.real, label='z signal', color='green')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
-plt.title('Plot 2')
+plt.title('Plot of the signal Z - Sum of X, Y, and W')
 plt.legend()
+plt.tight_layout()
+plt.subplot(212)
+
 
 # This is plotting the Fourier transform of the signal z.
 fig3 = plt.figure()
@@ -82,12 +86,12 @@ plt.legend()
 # This is plotting the Fourier transform of the signal z_filtered.
 plt.figure(figsize=(10,6))
 plt.subplot(211)
-plt.plot(t, z)
+plt.plot(t, z, color='green')
 plt.title('Original signal')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
 plt.subplot(212)
-plt.plot(t, np.real(z_filtered))
+plt.plot(t, np.real(z_filtered), color='red')
 plt.title('Filtered signal (only X signal allowed to pass)')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
