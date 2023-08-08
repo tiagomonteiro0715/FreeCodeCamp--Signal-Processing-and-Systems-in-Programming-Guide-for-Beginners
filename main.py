@@ -9,8 +9,8 @@ sns.set_style("darkgrid")
 Creates three sinusoidal signals with different frequencies and amplitudes, 
 adds them together to create a composite signal, and stores it in z.
 '''
-# Creating a vector of 300 evenly spaced numbers between 0 and 1.
-t = np.linspace(0, 1, 300, endpoint=False)
+# Creating a vector of 150 evenly spaced numbers between 0 and 1.
+t = np.linspace(0, 1, 150, endpoint=False)
 # Creating a sinusoidal signal with a frequency of 10 Hz.
 x = np.sin(2*np.pi*10*t)
 # Creating a sinusoidal signal with a frequency of 20 Hz.
@@ -37,14 +37,14 @@ spectrum = 2/N * np.abs(zf[:N//2])
 
 
 '''
-Creating a mask that is false for frequencies between 30 and 60 Hz
+Creating a mask that is false for frequencies between 15 and 60 Hz
 '''
 # Creating a vector of ones with the same length as the vector freq.
 mask = np.ones(len(freq), dtype=bool)
-# Creating a mask that is false for frequencies between 30 and 60 Hz.
-mask[(freq > 30) & (freq < 60)] = False
-# Creating a mask that is false for frequencies between 30 and 60 Hz.
-mask[(freq < -30) & (freq > -60)] = False
+# Creating a mask that is false for frequencies between 15 and 60 Hz.
+mask[(freq > 15) & (freq < 60)] = False
+# Creating a mask that is false for frequencies between 15 and 60 Hz.
+mask[(freq < -15) & (freq > -60)] = False
 
 '''
 Creating a copy of the vector zf and then setting the values of the vector zf_filtered to zero for
