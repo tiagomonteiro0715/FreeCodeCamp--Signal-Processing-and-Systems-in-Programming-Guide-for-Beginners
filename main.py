@@ -37,14 +37,14 @@ spectrum = 2/N * np.abs(zf[:N//2])
 
 
 '''
-Creating a mask that is false for frequencies between 15 and 60 Hz
+Creating a mask that is false for frequencies between 30 and 60 Hz
 '''
 # Creating a vector of ones with the same length as the vector freq.
 mask = np.ones(len(freq), dtype=bool)
-# Creating a mask that is false for frequencies between 15 and 60 Hz.
-mask[(freq > 15) & (freq < 60)] = False
-# Creating a mask that is false for frequencies between 15 and 60 Hz.
-mask[(freq < -15) & (freq > -60)] = False
+# Creating a mask that is false for frequencies between 30 and 60 Hz.
+mask[(freq > 30) & (freq < 60)] = False
+# Creating a mask that is false for frequencies between 30 and 60 Hz.
+mask[(freq < -30) & (freq > -60)] = False
 
 '''
 Creating a copy of the vector zf and then setting the values of the vector zf_filtered to zero for
