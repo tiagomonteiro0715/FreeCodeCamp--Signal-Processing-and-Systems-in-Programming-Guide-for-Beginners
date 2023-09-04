@@ -1,6 +1,15 @@
 # Importing the numpy and matplotlib libraries.
-import numpy as np
+import matplotlib
+
+
+
+
+matplotlib.use('Agg')  # Set the Agg backend
+
+
+
 import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
 
 sns.set_style("darkgrid")
@@ -76,6 +85,7 @@ plt.title('Plot of the signal Z - Sum of X, Y, and W')
 plt.legend()
 plt.tight_layout()
 plt.subplot(212)
+plt.savefig("graph1.png")
 
 
 # This is plotting the Fourier transform of the signal z.
@@ -85,6 +95,9 @@ plt.xlabel('Frequency [Hz]')
 plt.ylabel('Amplitude')
 plt.title('Plot 3')
 plt.legend()
+plt.savefig("graph2.png")
+
+
 
 # This is plotting the Fourier transform of the signal z_filtered.
 plt.figure(figsize=(10,6))
@@ -99,4 +112,4 @@ plt.title('Filtered signal (only X signal allowed to pass)')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
 plt.tight_layout()
-plt.show()
+plt.savefig("graph3.png")
