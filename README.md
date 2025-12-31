@@ -2,6 +2,10 @@
 
 Article link - [Signal Processing and Systems in Programming – Guide for Beginners](https://www.freecodecamp.org/news/signal-processing-and-systems-in-programming/)
 
-My FreeCodeCamp page [link](https://www.freecodecamp.org/news/author/tiago/)
+My FreeCodeCamp page [link](https://www.freecodecamp.org/news/author/tiagomonteiro/)
 
-My main repository for FreeCodeCamp code [link](https://github.com/tiagomonteiro0715/freecodecamp-my-articles-source-code/tree/main)
+Here you can find the code I use in my freecodecamp news articles: [link](https://github.com/tiagomonteiro0715/freecodecamp-my-articles-source-code/tree/main)
+
+And here is the github repository to the python and latex code of my book: [The Math Behind Artificial Intelligence A Guide to AI Foundations](https://github.com/tiagomonteiro0715/The-Math-Behind-Artificial-Intelligence-A-Guide-to-AI-Foundations/tree/main)
+
+[Here](https://ray.so/) is the site I use to create the code images.
